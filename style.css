@@ -1,104 +1,165 @@
+/* zerowanie marginu dokumentów  */
+
 html,
 body {
-  margin: 0;
+    margin: 0;
 }
+
+
 /* zerowanie paddingów  */
+
 p,
 h1 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
-h1{
+
+
+/* kolor dla wszystkich h1 */
+
+h1 {
     color: #ADE8F4;
 }
+
+
 /* style głównego kontenera  */
+
 .kontener {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 5em auto 2em;
-  height: 100vh;
-  font-family: "Verdana", Geneva, sans-serif;
-  color: #023e8a;
-  background-color: #0096c7;
+    /* siatkowy layout  */
+    display: grid;
+    /* jedna kolumna automatyczna szerokość */
+    grid-template-columns: auto;
+    /* 3 rzędy z czego środkowy ma dopasować wysokość  */
+    grid-template-rows: 5em auto 2em;
+    /* wysokość kontenera  */
+    height: 100vh;
+    /* czcionka kolor background  */
+    font-family: "Verdana", Geneva, sans-serif;
+    color: #023e8a;
+    background-color: #0096c7;
 }
+
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* responsywna czcionka  */
-  font-size: 2em;
-  background-color: #00b4d8;
-  color: #023e8a;
-  border-bottom: 0.1em solid #0077b6;
-  border-bottom-left-radius: 0.4em;
-  border-bottom-right-radius: 0.4em;
+    /* wyświetlanie flexem  */
+    display: flex;
+    /* wyśrodkuj horyzontalnie i wertykalnie  */
+    justify-content: center;
+    align-items: center;
+    /* responsywna czcionka  */
+    font-size: 2em;
+    background-color: #00b4d8;
+    color: #023e8a;
+    /* border */
+    border-bottom: 0.1em solid #0077b6;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
 }
+
 .srodek {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
+    /* znowu siatka tym razem automatyczne 1 kolumna i 3 wiesze  */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
 }
+
 .pojemnik {
     display: flex;
+    /* elementy rozkłądam równo i po równych odległościach (każdy element od lewej i prawej ) */
     justify-content: space-around;
-    
 }
+
 .swieta {
-  padding-top: 2em;
+    /* odstęp od góry  */
+    padding-top: 2em;
 }
+
 img {
+    /* rozmiar zdjęcia oraz jego zaokrąglony border  */
     height: 300px;
     border: 0.2em solid #CAF0F8;
     border-radius: 0.2em;
-  }
-.swieta > div{
-    display:flex;
+}
+
+
+/* divy w klasie święta mają takie cechy  */
+
+.swieta>div {
+    display: flex;
     /* display flex ustawia w rzędzie i to zmieniamy na kolumne  */
     flex-direction: column;
 }
 
-table{
+
+/* tabela  */
+
+table {
     border: 0.2em solid #CAF0F8;
     border-radius: 0.2em;
     padding: 1em;
-    color:white;
+    color: white;
 }
- td{
+
+
+/* wiersz tabeli  */
+
+td {
     padding: 1em;
     text-align: center;
- }
- /* dla każdego parzystego rzędu dajemy styl  */
- tr:nth-child(even){
-     background-color: #ADE8F4;
-     color: #03045E;
- }
- /* wyłączenie default wyglądu  */
- a:link {
+}
+
+
+/* dla każdego parzystego rzędu dajemy styl  */
+
+tr:nth-child(even) {
+    background-color: #ADE8F4;
+    color: #03045E;
+}
+
+
+/* wyłączenie default wyglądu link */
+
+a:link {
     text-decoration: none;
-  }
-  /* najechanie myszką wygląd  */
-  a:hover {
+}
+
+
+/* najechanie myszką wygląd  */
+
+a:hover {
     text-decoration: underline;
-  }
+}
+
+
+/* tak jak wczesniej pisalem kazdy z 'boxów ' ma display: flex ttuaj zmieniamy kolejność układania elementów  */
+
 .zagranica {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
+
 /* zerowanie kropek  */
-ul{
+
+ul {
     list-style-type: none;
     color: azure;
 }
 
+
 /* zmiana na najechaniu  */
-li:hover{
+
+li:hover {
     color: #023E8A;
     text-decoration: underline;
     /* czas trwania zmiany  */
     transition: 1s;
 }
+
+
+/* ustawienie tekstu po środku  */
+
 footer {
     text-align: center;
 }
